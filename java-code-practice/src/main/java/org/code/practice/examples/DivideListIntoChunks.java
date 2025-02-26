@@ -35,11 +35,9 @@ public class DivideListIntoChunks {
         //Solution 2 : using Java Stream API
 
         AtomicInteger counter = new AtomicInteger();
-        Map<Integer, List<Integer>> map = intList
-                .stream()
-                .collect(Collectors.groupingBy(x -> counter.getAndIncrement() / chunkSize));
-
-        outList.addAll(map.values());
+        intList.stream()
+                .collect(Collectors.groupingBy(x -> counter.getAndIncrement() / chunkSize))
+                .values().forEach(outList::add);
 
         System.out.println(outList);
 
