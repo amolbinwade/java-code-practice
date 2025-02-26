@@ -1,4 +1,4 @@
-package org.code.practice.keyValueDB;
+package org.code.practice.keyvaluedb;
 
 import java.io.IOException;
 import java.nio.file.Files;
